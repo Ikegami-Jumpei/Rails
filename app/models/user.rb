@@ -8,4 +8,7 @@ class User < ApplicationRecord
     validates :password, presence:true,
       length: { minimum:8, maximum:32 },
       format: { with:/\A(?!\d*[a-zA-Z]*\z)[a-zA-Z0-9]+\z/i}
+
+      has_many :topics
+
 end
